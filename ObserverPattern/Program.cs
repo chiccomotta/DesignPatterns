@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ObserverPattern
 {
@@ -57,7 +58,6 @@ namespace ObserverPattern
             Observer o2 = new Observer(s);
 
             s.DoSomething();
-
             Console.ReadLine();            
         }
     }
@@ -79,12 +79,12 @@ namespace ObserverPattern
 
     public class Observer
     {
-        private Guid IdObserver { get; set; }        
+        private int IdObserver { get; set; }
 
         public Observer(Subject s)
-        {
+        {            
             s.OnNotify += new Subject.Notify(EventHandler);
-            IdObserver = Guid.NewGuid(); 
+            IdObserver = new Random().Next();
         }
 
         public void EventHandler()
