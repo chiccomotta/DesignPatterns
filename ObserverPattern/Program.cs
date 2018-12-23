@@ -80,20 +80,13 @@ namespace ObserverPattern
     public class Observer
     {
         private int IdObserver { get; set; }
-
+        
         public Observer(Subject s)
         {            
             s.OnNotify += new Subject.Notify(EventHandler);
             IdObserver = new Random().Next();
         }
-        // 1
-        // 2
-        // 3
-        // 4
-        // 5
-
-        // Last
-
+      
         public void EventHandler()
         {
             Console.WriteLine($"Observer {this.IdObserver} was called by subject", this);

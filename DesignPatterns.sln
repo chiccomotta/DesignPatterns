@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{26ECA8BD-6A2B-4CE6-8159-966458C4D247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{26ECA8BD-6A2B-4CE6-8159-966458C4D247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPattern", "CommandPattern\CommandPattern.csproj", "{7951F16A-8B35-45FB-93D8-DF5AE5FE8356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandPattern", "CommandPattern\CommandPattern.csproj", "{7951F16A-8B35-45FB-93D8-DF5AE5FE8356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCommandPattern", "GenericCommandPattern\GenericCommandPattern.csproj", "{17AF7CD5-CABF-464A-962E-4A7226178DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCommandPattern", "GenericCommandPattern\GenericCommandPattern.csproj", "{17AF7CD5-CABF-464A-962E-4A7226178DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{C0DF8FD5-DB19-4ACF-88E6-B01BEC3C92A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{C0DF8FD5-DB19-4ACF-88E6-B01BEC3C92A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
