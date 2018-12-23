@@ -2,10 +2,7 @@
 
 namespace GenericCommandPattern
 {
-    /*
-     * Command Pattern con interfaccia Command di tipo ICommand<T> dove T è il tipo del payload
-     */
-
+    /*** Command Pattern con interfaccia Command di tipo ICommand<T> dove T è il tipo del payload ***/
     class Program
     {
         static void Main(string[] args)
