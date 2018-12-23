@@ -64,7 +64,7 @@ namespace ObserverPattern
 
     public class Subject
     {
-        public delegate void Notify();
+        public delegate void Notify(string message);
         public event Notify OnNotify;
 
         public void DoSomething()
@@ -72,7 +72,7 @@ namespace ObserverPattern
             if (OnNotify != null)
             {
                 Console.WriteLine("Subject fires event");
-                OnNotify();
+                OnNotify("Hello");
             }
         }
     }
@@ -87,9 +87,9 @@ namespace ObserverPattern
             IdObserver = new Random().Next();
         }
       
-        public void EventHandler()
+        public void EventHandler(string message)
         {
-            Console.WriteLine($"Observer {this.IdObserver} was called by subject", this);
+            Console.WriteLine($"Observer {this.IdObserver} was called by subject, message is {message}", this);
         }
     }    
 }
