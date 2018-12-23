@@ -20,10 +20,28 @@ namespace CommandPattern
         - per parametrizzare gli oggetti rispetto ad una azione da compiere
         - per specificare, accodare ed eseguire svariate richieste in tempi diversi, anche trasferendo 
           un comando da un contesto di esecuzione ad un altro;
-
         - per consentire l’annullamento delle operazioni eseguite (undo, rollback), mantenendo preventivamente lo stato 
           per annullare gli effetti dei comandi stessi.
-     */
+     
+    I partecipanti di questo pattern sono(tra parentesi sono indicati gli oggetti equivalenti nell’esempio 
+    proposto successivamente):
+
+    Command(ICommand)
+    Definisce l’interfaccia di riferimento per ogni comando.
+
+    ConcreteCommand(RegisterPersonCommand, UnregisterPersonCommand)
+    Definisce un legame tra il Receiver e un’azione. 
+    Implementa in modo particolare il metodo Execute() invocando i metodi del Receiver.
+
+    Invoker(commands in Main)
+    Aggrega i diversi comandi e delega a loro l’esecuzione delle azioni previste.
+
+    Receiver(System.Console)
+    Conosce il modo di eseguire le operazioni associate ad una particolare richiesta.
+
+    Client(Program)
+    Tramite l’Invoker attiva ed esegue un ConcreteCommand che va a interessare il Receiver corrispondente.
+    */
 
     class Program
     {
