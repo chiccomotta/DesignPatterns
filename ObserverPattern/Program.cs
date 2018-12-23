@@ -86,6 +86,13 @@ namespace ObserverPattern
             s.OnNotify += new Subject.Notify(EventHandler);
             IdObserver = new Random().Next();
         }
+        // 1
+        // 2
+        // 3
+        // 4
+        // 5
+
+        // Last
 
         public void EventHandler()
         {
