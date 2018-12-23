@@ -22,6 +22,7 @@ namespace GenericCommandPattern
 
             foreach (var command in commands)
             {
+                Console.WriteLine($"Executing command {command.ToString()}");
                 command.Execute(person);
             }
 
