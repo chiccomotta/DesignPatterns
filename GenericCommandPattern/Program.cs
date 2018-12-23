@@ -1,8 +1,13 @@
 ﻿using System;
+// ReSharper disable All
 
 namespace GenericCommandPattern
 {
-    /*** Command Pattern con interfaccia Command di tipo ICommand<T> dove T è il tipo del payload ***/
+    /*
+        Command Pattern con interfaccia Command di tipo ICommand<T> dove T è la classe che
+        incapsula i dati da passare nel command 
+    */
+
     class Program
     {
         static void Main(string[] args)
