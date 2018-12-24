@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCommandPattern", "Ge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{C0DF8FD5-DB19-4ACF-88E6-B01BEC3C92A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{EA815177-C250-48F5-BC29-60EBDA961914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{EA815177-C250-48F5-BC29-60EBDA961914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EA815177-C250-48F5-BC29-60EBDA961914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA815177-C250-48F5-BC29-60EBDA961914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA815177-C250-48F5-BC29-60EBDA961914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
