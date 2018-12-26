@@ -28,7 +28,8 @@ namespace FactoryPattern
                 new Shape[]
                 {
                     ShapeCreator.CreateShape(ShapeType.Circle),
-                    ShapeCreator.CreateShape(ShapeType.Rectangle)
+                    ShapeCreator.CreateShape(ShapeType.Rectangle),
+                    ShapeCreator.CreateShape(ShapeType.Square)
                 };
 
             foreach (Shape s in shapes)
@@ -41,13 +42,22 @@ namespace FactoryPattern
     public enum ShapeType
     {
         Rectangle = 1,
-        Circle = 2
+        Circle = 2,
+        Square = 3
     }
 
-    // Posso usare una interfaccia oppure una classe astratta
+    // Posso usare un'interfaccia oppure una classe astratta
     public abstract class Shape
     {
         public abstract void Draw();
+    }
+
+    public class Square : Shape
+    {
+        public override void Draw()
+        {
+            Console.WriteLine("Square");
+        }
     }
 
     public class Rectangle : Shape
@@ -76,6 +86,8 @@ namespace FactoryPattern
                     return new Rectangle();
                 case ShapeType.Circle:
                     return new Circle();
+                case ShapeType.Square:
+                    return new Square();
                 default:
                     throw new ArgumentException("type");
             }

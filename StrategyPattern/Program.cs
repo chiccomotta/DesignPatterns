@@ -12,9 +12,9 @@ namespace StrategyPattern
        fornendo un basso accoppiamento tra le classi partecipanti del pattern e una alta coesione funzionale 
        delle diverse strategie di implementazione.
        
-       Participants
+       Partecipanti
 
-       The classes and objects participating in this pattern are:
+       Le classi e gli oggetti che partecipano a questo pattern sono:
 
        - Strategy  (IStrategy)
          declares an interface common to all supported algorithms. Context uses this interface to call the algorithm defined 
@@ -80,16 +80,16 @@ namespace StrategyPattern
 
     class Context
     {
-        private IStrategy strategy;
+        private IStrategy Strategy;
 
-        public Context(IStrategy _strategy)
+        public Context(IStrategy strategy)
         {
-            this.strategy = _strategy;
+            this.Strategy = strategy;
         }
 
         public void ContextInterface()
         {
-            strategy.AlgorithmInterface();
+            Strategy.AlgorithmInterface();
         }
     }
 }
