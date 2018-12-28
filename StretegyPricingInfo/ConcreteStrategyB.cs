@@ -4,7 +4,7 @@
     {
         public void Execute(PricingInfo pricingInfo)
         {
-            pricingInfo.Executions.Add("Called ConcreteStrategyB.Execute()");
+            pricingInfo.Executions.Add("Called ConcreteStrategyB.ApplyStrategies()");
         }
     }
 }

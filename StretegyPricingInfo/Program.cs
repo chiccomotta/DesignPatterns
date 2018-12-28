@@ -1,32 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace StrategyPricingInfo
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            // Registro i servizi nel container
+            var serviceProvider = new ServiceCollection()
+                .AddSingleton<ILoggingService, LoggingService>()
+                .AddSingleton(typeof(Context))
+                .BuildServiceProvider();
+
             Context context;
-            var pricingInfo = new PricingInfo()
+
+            var strategies = new List<IExecuteStrategy>()
             {
-                Executions = new List<string>()
+                new ConcreteStrategyA(),
+                new ConcreteStrategyB(),
+                new ConcreteStrategyC()
             };
 
-            // Three contexts following different strategies
-            context = new Context(new ConcreteStrategyA(), pricingInfo);
-            context.Execute();
-
-            context = new Context(new ConcreteStrategyB(), pricingInfo);
-            context.Execute();
-
-            context = new Context(new ConcreteStrategyC(), pricingInfo);
-            context.Execute();
+            // One context following three different strategies
+            context = serviceProvider.GetService<Context>();
+            var pricingInfo = context.ApplyStrategies(strategies);
 
             // Debug
             pricingInfo.Executions.ForEach(Console.WriteLine);
 
             Console.ReadKey();
+        }
+    }
+
+    public interface ILoggingService
+    {
+        void Log(string message);
+    }
+
+    public class LoggingService : ILoggingService
+    {
+        public void Log(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }
