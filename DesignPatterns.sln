@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonPattern", "Singlet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPricingInfo", "StretegyPricingInfo\StrategyPricingInfo.csproj", "{B4C400CF-05C1-446A-8BDA-B2759BBB911F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CE850E3-6E60-48D9-B57D-5EAE8AD2A259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C400CF-05C1-446A-8BDA-B2759BBB911F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C400CF-05C1-446A-8BDA-B2759BBB911F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C400CF-05C1-446A-8BDA-B2759BBB911F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C400CF-05C1-446A-8BDA-B2759BBB911F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
