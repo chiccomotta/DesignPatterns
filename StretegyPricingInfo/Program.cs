@@ -14,8 +14,6 @@ namespace StrategyPricingInfo
                 .AddSingleton(typeof(Context))
                 .BuildServiceProvider();
 
-            Context context;
-
             var strategies = new List<IExecuteStrategy>()
             {
                 new ConcreteStrategyA(),
@@ -24,7 +22,7 @@ namespace StrategyPricingInfo
             };
 
             // One context following three different strategies
-            context = serviceProvider.GetService<Context>();
+            var context = serviceProvider.GetService<Context>();
             var pricingInfo = context.ApplyStrategies(strategies);
 
             // Debug
