@@ -5,14 +5,14 @@ using Maybe;
 
 namespace Maybe
 {
-    // Interfaccia IMaybe
+    // Interfaccia IMaybe (ma preferisco usare la classe astratta)
     public interface IMaybe<T>
     {
         bool HasValue();
         T Value { get; }
     }
 
-    // Oppure creo la classe astratta Maybe
+    // Oppure creo la classe astratta Maybe (più comoda)
     public abstract class Maybe<T>
     {
         public virtual bool HasValue()

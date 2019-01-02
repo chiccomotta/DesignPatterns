@@ -27,12 +27,12 @@ namespace Immutability
         public string Identifier { get; }
         public string Content { get; }
 
-        public TextDocument WithIdentifier(String newValue)
+        public TextDocument WithIdentifier(string newValue)
         {
             return new TextDocument(identifier: newValue, content: Content);
         }
 
-        public TextDocument WithContent(String newValue)
+        public TextDocument WithContent(string newValue)
         {
             return new TextDocument(identifier: Identifier, content: newValue);
         }

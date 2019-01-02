@@ -7,7 +7,7 @@ namespace Maybe
         static void Main(string[] args)
         {
             // Test
-            var foo = FindFoo(1);
+            Maybe<Foo> foo = FindFoo(1);
             Console.WriteLine(foo.HasValue());
             Console.WriteLine(foo.Value);
 
@@ -24,10 +24,8 @@ namespace Maybe
             {
                 return new None<Foo>();
             }
-            else
-            {
-                return new Some<Foo>(new Foo(1));
-            }
+
+            return new Some<Foo>(new Foo(1));
         }
     }
 }
