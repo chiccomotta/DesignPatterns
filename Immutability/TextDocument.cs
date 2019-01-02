@@ -18,14 +18,14 @@ namespace Immutability
 
     public class TextDocument
     {
+        public string Identifier { get; }
+        public string Content { get; }
+
         public TextDocument(string identifier, string content)
         {
             Identifier = identifier;
             Content = content;
         }
-
-        public string Identifier { get; }
-        public string Content { get; }
 
         public TextDocument WithIdentifier(string newValue)
         {
