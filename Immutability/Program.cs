@@ -12,15 +12,17 @@ namespace Immutability
             var existingDocument = new TextDocument("text_1", "Hello Wordl!");
             var sameDocument = existingDocument;
 
-            // Same sreference
+            // Same reference
             Console.WriteLine(object.ReferenceEquals(existingDocument, sameDocument));
 
-            // Modifico l'oggetto creandone uno nuovo con l'extension method With
+            // Modifico l'oggetto creandone uno nuovo con l'extension method With che
+            // restituisce un nuovo oggetto basato sulle stesse proprietà più quella modificata
             var newDocument =
                 existingDocument     
                     .WithIdentifier("text_2")
                     .WithContent(existingDocument.Content + Environment.NewLine + "Thank you");
-
+            
+            // Not the same reference
             Console.WriteLine(object.ReferenceEquals(existingDocument, newDocument));
 
             Console.WriteLine($"{newDocument.Identifier} , {newDocument.Content}");
