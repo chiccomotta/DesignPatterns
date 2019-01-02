@@ -20,7 +20,7 @@ namespace Immutability
             var newDocument =
                 existingDocument     
                     .WithIdentifier("text_2")
-                    .WithContent(existingDocument.Content + Environment.NewLine + "Thank you");
+                    .WithContent(existingDocument.Content + " Thank you");
             
             // Not the same reference
             Console.WriteLine(object.ReferenceEquals(existingDocument, newDocument));
