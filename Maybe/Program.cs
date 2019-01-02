@@ -6,16 +6,28 @@ namespace Maybe
     {
         static void Main(string[] args)
         {
-            // Test Maybe
-            var foo = new Foo();
-            var maybeFooNotNull = new Some<Foo>(foo);
-            var maybeFooNull = new None<Foo>();
+            // Test
+            var foo = FindFoo(1);
+            Console.WriteLine(foo.HasValue());
+            Console.WriteLine(foo.Value);
 
-            Console.WriteLine(maybeFooNotNull.HasValue());
-            Console.WriteLine(maybeFooNotNull.Value());
-            Console.WriteLine(maybeFooNull.HasValue());
+            foo = FindFoo(0);
+            Console.WriteLine(foo.HasValue());
+            // Console.WriteLine(foo.Value);  // this throws an error
 
             Console.ReadKey();
+        }
+
+        public static Maybe<Foo> FindFoo(int id)
+        {
+            if (id == 0)
+            {
+                return new None<Foo>();
+            }
+            else
+            {
+                return new Some<Foo>(new Foo(1));
+            }
         }
     }
 }

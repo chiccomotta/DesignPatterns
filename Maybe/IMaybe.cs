@@ -1,16 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Maybe;
 
 namespace Maybe
 {
+    // Interfaccia IMaybe
     public interface IMaybe<T>
     {
         bool HasValue();
-        T Value();
+        T Value { get; }
     }
 
-    public class Some<T> : IMaybe<T>
+    // Oppure creo la classe astratta Maybe
+    public abstract class Maybe<T>
+    {
+        public virtual bool HasValue()
+        {
+            return true;
+        }
+
+        public virtual T Value { get; }
+    }
+
+    //public class Some<T> : IMaybe<T>
+    //{
+    //    private readonly T t;
+
+    //    public Some(T t)
+    //    {
+    //        this.t = t;
+    //    }
+
+    //    public bool HasValue()
+    //    {
+    //        return true;
+    //    }
+
+    //    public T Value
+    //    {
+    //        get { return t; }
+    //    }      
+    //}
+
+    //public class None<T> : IMaybe<T>
+    //{
+    //    public bool HasValue()
+    //    {
+    //        return false;
+    //    }
+
+    //    public T Value
+    //    {
+    //        get
+    //        {
+    //            throw new ApplicationException("Object is null");
+    //        }
+    //    }
+    //}
+
+    public class Some<T> : Maybe<T>
     {
         private readonly T t;
 
@@ -19,27 +68,42 @@ namespace Maybe
             this.t = t;
         }
 
-        public bool HasValue()
+        public override bool HasValue()
         {
             return true;
         }
 
-        public T Value()
+        public override T Value
         {
-            return t;
+            get { return t; }
         }
     }
 
-    public class None<T> : IMaybe<T>
+    public class None<T> : Maybe<T>
     {
-        public bool HasValue()
+        public override bool HasValue()
         {
             return false;
         }
 
-        public T Value()
+        public T Value
         {
-            throw new ApplicationException("Object is null");
+            get
+            {
+                throw new ApplicationException("Object is null");
+            }
         }
     }
+
+    //public static class ObjectExtensions
+    //{
+    //    public static IMaybe<T> AsMaybe<T>(this T obj)
+    //        where T : class
+    //    {
+    //        if (obj == null)
+    //            return new None<T>();
+
+    //        return new Some<T>(obj);
+    //    }
+    //}
 }
