@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Maybe;
 
 namespace Maybe
 {
@@ -15,12 +12,8 @@ namespace Maybe
     // Oppure creo la classe astratta Maybe (più comoda)
     public abstract class Maybe<T>
     {
-        public virtual bool HasValue()
-        {
-            return true;
-        }
-
-        public virtual T Value { get; }
+        public abstract bool HasValue();
+        public abstract T Value { get; }
     }
 
     //public class Some<T> : IMaybe<T>
@@ -86,7 +79,7 @@ namespace Maybe
             return false;
         }
 
-        public T Value
+        public override T Value
         {
             get
             {
