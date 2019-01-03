@@ -2,15 +2,15 @@
 
 namespace Maybe
 {
-    // Interfaccia IMaybe (ma preferisco usare la classe astratta)
+    // Interfaccia IMaybe
     public interface IMaybe<T>
     {
         bool HasValue();
         T Value { get; }
     }
 
-    // Oppure creo la classe astratta Maybe (più comoda)
-    public abstract class Maybe<T>
+    // Creo la classe astratta Maybe
+    public abstract class Maybe<T> : IMaybe<T>
     {
         public abstract bool HasValue();
         public abstract T Value { get; }
