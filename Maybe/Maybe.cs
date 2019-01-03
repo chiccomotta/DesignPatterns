@@ -15,43 +15,7 @@ namespace Maybe
         public abstract bool HasValue();
         public abstract T Value { get; }
     }
-
-    //public class Some<T> : IMaybe<T>
-    //{
-    //    private readonly T t;
-
-    //    public Some(T t)
-    //    {
-    //        this.t = t;
-    //    }
-
-    //    public bool HasValue()
-    //    {
-    //        return true;
-    //    }
-
-    //    public T Value
-    //    {
-    //        get { return t; }
-    //    }      
-    //}
-
-    //public class None<T> : IMaybe<T>
-    //{
-    //    public bool HasValue()
-    //    {
-    //        return false;
-    //    }
-
-    //    public T Value
-    //    {
-    //        get
-    //        {
-    //            throw new ApplicationException("Object is null");
-    //        }
-    //    }
-    //}
-
+    
     public class Some<T> : Maybe<T>
     {
         private readonly T t;
@@ -81,28 +45,7 @@ namespace Maybe
 
         public override T Value
         {
-            get
-            {
-                throw new ApplicationException("Object is null");
-            }
-        }
-    }
-
-    public static class MaybeExtensions
-    {
-        public static U Case<T, U>(this Maybe<T> obj, Func<T, U> some, Func<U> none)
-        {
-            return obj.HasValue() 
-                ? some(obj.Value) 
-                : none();
-        }
-
-        public static IMaybe<T> AsMaybe<T>(this T obj) where T : class
-        {
-            if (obj == null)
-                return new None<T>();
-
-            return new Some<T>(obj);
+            get { throw new ApplicationException("Object is null"); }
         }
     }
 }
