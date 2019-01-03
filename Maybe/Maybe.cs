@@ -88,15 +88,21 @@ namespace Maybe
         }
     }
 
-    //public static class ObjectExtensions
-    //{
-    //    public static IMaybe<T> AsMaybe<T>(this T obj)
-    //        where T : class
-    //    {
-    //        if (obj == null)
-    //            return new None<T>();
+    public static class MaybeExtensions
+    {
+        public static U Case<T, U>(this Maybe<T> obj, Func<T, U> some, Func<U> none)
+        {
+            return obj.HasValue() 
+                ? some(obj.Value) 
+                : none();
+        }
 
-    //        return new Some<T>(obj);
-    //    }
-    //}
+        public static IMaybe<T> AsMaybe<T>(this T obj) where T : class
+        {
+            if (obj == null)
+                return new None<T>();
+
+            return new Some<T>(obj);
+        }
+    }
 }
