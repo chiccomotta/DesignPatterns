@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{26ECA8BD-6A2B-4CE6-8159-966458C4D247}"
 EndProject
@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPricingInfo", "Stre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maybe", "Maybe\Maybe.csproj", "{E343B10D-50F8-453D-BAD4-0F607CE11907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immutability", "Immutability\Immutability.csproj", "{83464DE5-DDCE-4657-ACC2-F5F934C80C77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Immutability", "Immutability\Immutability.csproj", "{83464DE5-DDCE-4657-ACC2-F5F934C80C77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{83464DE5-DDCE-4657-ACC2-F5F934C80C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83464DE5-DDCE-4657-ACC2-F5F934C80C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83464DE5-DDCE-4657-ACC2-F5F934C80C77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
