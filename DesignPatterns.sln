@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Immutability", "Immutabilit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityProject", "EqualityProject\EqualityProject\EqualityProject.csproj", "{B4FAB170-EA32-4A51-904F-EC7647194B93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityProject", "EqualityProject\EqualityProject.csproj", "{9010C9D8-F47D-4A10-AB6C-BFE20856A786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4FAB170-EA32-4A51-904F-EC7647194B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4FAB170-EA32-4A51-904F-EC7647194B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4FAB170-EA32-4A51-904F-EC7647194B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4FAB170-EA32-4A51-904F-EC7647194B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9010C9D8-F47D-4A10-AB6C-BFE20856A786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9010C9D8-F47D-4A10-AB6C-BFE20856A786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9010C9D8-F47D-4A10-AB6C-BFE20856A786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9010C9D8-F47D-4A10-AB6C-BFE20856A786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

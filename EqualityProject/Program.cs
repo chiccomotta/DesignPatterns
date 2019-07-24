@@ -17,7 +17,7 @@ namespace EqualityProject
             {
                 Console.WriteLine(item);
             }
-            
+
             //Problem with object comparison
             var students = new List<Student>();
             var girl = new Student() { Name = "Simran", StudentId = 4 };
