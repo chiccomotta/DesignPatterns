@@ -23,7 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Immutability", "Immutabilit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{9228D0F6-7475-4D2C-8D0E-E8C608824E2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualityProject", "EqualityProject\EqualityProject.csproj", "{9010C9D8-F47D-4A10-AB6C-BFE20856A786}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualityProject", "EqualityProject\EqualityProject.csproj", "{9010C9D8-F47D-4A10-AB6C-BFE20856A786}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0F1CE42-DAF0-4BBF-8499-4EE5ECA19185}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\crist\Desktop\Design Patterns.docx = ..\..\Users\crist\Desktop\Design Patterns.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

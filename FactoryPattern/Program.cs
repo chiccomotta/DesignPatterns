@@ -10,14 +10,17 @@ namespace FactoryPattern
         
         Questo pattern raggiunge il suo scopo fornendo un'interfaccia per creare un oggetto, 
         ma lascia che le sottoclassi decidano quale oggetto istanziare.
+        
+        L'utilizzo di questo pattern implica la creazione di una classe factory che gestirà la creazione di oggetti classi che
+        imlementano la stessa astrazione (interfaccia). Ciò significa che, se c'è un'interfaccia definita per diverse sottoclassi,
+        la classe Factory può creare qualsiasi di queste sottoclassi a seconda della logica passata alla factory.
 
-        La creazione di un oggetto può, spesso, richiedere processi complessi la cui collocazione all'interno 
-        della classe di composizione potrebbe non essere appropriata. 
-        Esso può, inoltre, comportare la duplicazione di codice, richiedere informazioni non accessibili alla classe 
-        di composizione, o non provvedere un sufficiente livello di astrazione. 
-        Il factory method indirizza questi problemi definendo un metodo separato per la creazione degli oggetti; 
-        tale metodo può essere ridefinito dalle sottoclassi per definire il tipo derivato di prodotto 
-        che verrà effettivamente creato.
+        Facciamo un esempio: creiamo una factory chiamata BurgerFactory che prenderà in input il parametro typeOfBurger 
+        (per esempio Pollo o Manzo). Il Burgerfactory deciderà quale tipo di oggetto Burger dovrà creare. 
+        Supponiamo di avere un'interfaccia chiamata IBurger che sia il ChickenBurger sia il BeefBurger implementano, allora la classe
+        BurgerFactory restituirà un oggetto di tipo IBurger. 
+        Il client non è a conoscenza di quale oggetto IBurger verrà creato e restituito; in questo modo riusciamo ad isolare 
+        il client dallo specifico oggetto ritornato aumentando la flessibilità e il riutilizzo del codice.            
     */
 
     class Program
