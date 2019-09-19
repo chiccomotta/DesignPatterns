@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualityProject", "Equality
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0F1CE42-DAF0-4BBF-8499-4EE5ECA19185}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Users\crist\Desktop\Design Patterns.docx = ..\..\Users\crist\Desktop\Design Patterns.docx
+		Design Patterns.docx = Design Patterns.docx
 	EndProjectSection
 EndProject
 Global
